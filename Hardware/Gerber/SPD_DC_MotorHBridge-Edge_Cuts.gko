@@ -1,0 +1,26 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,(5.1.9)-1*%
+%TF.CreationDate,2021-05-22T10:51:53+02:00*%
+%TF.ProjectId,SPD_DC_MotorHBridge,5350445f-4443-45f4-9d6f-746f72484272,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Profile,NP*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW (5.1.9)-1) date 2021-05-22 10:51:53*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%TA.AperFunction,Profile*%
+%ADD10C,0.150000*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+X0Y-20066000D02*
+X0Y0D01*
+X70040500Y-20066000D02*
+X0Y-20066000D01*
+X70040500Y0D02*
+X70040500Y-20066000D01*
+X0Y0D02*
+X70040500Y0D01*
+M02*

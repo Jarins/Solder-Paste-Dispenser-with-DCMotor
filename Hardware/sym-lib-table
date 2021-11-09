@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name SPD-rescue)(type Legacy)(uri "D:/Hardware/PCB/SolderPasteMotor/RevAB - Electrical, KiCad/RevAB/SPD-rescue.lib")(options "")(descr ""))
+)
