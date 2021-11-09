@@ -1,0 +1,10 @@
+tim.c:25:10:APB1TIM	8	static
+tim.c:33:10:APB2TIM	8	static
+tim.c:47:9:PWMPulse	8	static
+tim.c:160:6:HAL_TIM_Base_MspInit	8	static
+tim.c:176:6:HAL_TIM_PWM_MspInit	8	static
+tim.c:191:6:HAL_TIM_MspPostInit	32	static
+tim.c:56:6:MX_TIM3_Init	48	static
+tim.c:101:6:MX_TIM1_Init	96	static
+tim.c:238:6:HAL_TIM_Base_MspDeInit	0	static
+tim.c:254:6:HAL_TIM_PWM_MspDeInit	0	static
