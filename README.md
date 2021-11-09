@@ -31,7 +31,7 @@ It would be a little more difficult to migrate to the Arduino IDE,
  
 but even that is partially possible - it has not been tested
 
-CAD files are designed in SolidWorks preview here:
+CAD files are designed in SolidWorks, preview here:
 https://grabcad.com/library/3d-printed-solder-paste-dispenser-1
 
 ![Pic3](images/SolderPasteMotor.PNG)
