@@ -15,7 +15,7 @@ Motorized automatic solder paste dispenser. Easily printable on a 3D printer at 
 + [DC micromotor 6V / 60 rpm](https://www.aliexpress.com/item/33022320164.html?spm=a2g0s.9042311.0.0.266b4c4dmW3uVV) with gearbox without thread rod 
 + [Coupler](https://www.aliexpress.com/item/1005002015620915.html?spm=a2g0s.9042311.0.0.266b4c4dmW3uVV) to thread rod 
 + larger [syringe 10 ccm](https://www.aliexpress.com/item/10000092421369.html?spm=a2g0s.9042311.0.0.27424c4dw27aah)
-+ redesigned mechanism of operation and piston mounting
++ redesigned mechanism of operation and piston mounting and mainly redesigned Syringe mount, which can be removed and put on without disassembling the dispenser
 
 !! warning component links may be invalid over time !!
 
