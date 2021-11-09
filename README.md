@@ -22,6 +22,9 @@ Motorized automatic solder paste dispenser. Easily printable on a 3D printer at 
 + OLED display 128x32 pixels
 + The supply voltage is 9V
 
+
++ **Resistor R2** for measuring motor current is in the current version mounted with the value 0R, because the possibility of measuring this current is not used at the moment
+
 #### PCB is designed in KiCAD software
 ![Pict2](images/SPD_DC_MotorHBridge.png)
 
