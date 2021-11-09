@@ -1,5 +1,0 @@
-measurement.c:66:6:meas_Init	8	static
-measurement.c:82:6:HAL_ADC_ConvCpltCallback	24	static
-measurement.c:99:6:HAL_ADC_ErrorCallback	0	static
-measurement.c:105:7:meas_GetVbat	0	static
-measurement.c:110:7:meas_GetIm	0	static
