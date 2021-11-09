@@ -1,6 +1,5 @@
 # 3D Printed Solder-Paste-Dispenser
 Motorized automatic solder paste dispenser.
-
 Easily printable on a 3D printer at home
 ## __Work-in-progress__
 
@@ -20,25 +19,29 @@ Some differences:
 
 !! warning component links may be invalid over time !!
 
-OLED display 128x32 pixels
++ OLED display 128x32 pixels
 
 PCB is designed in KiCAD software
 ![Pict2](images/SPD_DC_MotorHBridge.png)
 
-Source code of Firmware is optimized for STM32CubeIDE and CubeMX software from ST Microelectronics.
++ Source code of Firmware is optimized for STM32CubeIDE and CubeMX software from ST Microelectronics.
 
-Source code are easy aplicable to another IDE.
++ Source code are easy aplicable to another IDE.
 
-It would be a little more difficult to migrate to the Arduino IDE,
- 
-but even that is partially possible - it has not been tested
++ It would be a little more difficult to migrate to the Arduino IDE, but even that is partially possible - it has not been tested
 
-CAD files are designed in SolidWorks, preview here:
++ CAD files are designed in SolidWorks, preview here:
 https://grabcad.com/library/3d-printed-solder-paste-dispenser-1
 
 ![Pic3](images/SolderPasteMotor.PNG)
 
 ![Pic4](images/SolderPasteMotor.gif)
+
++ All params are immeidiately saved to emulated EEprom(FLASH CPU) after select
+
++ Speed list : 10, 20, 30, 40, 50, 60, 70, 80, 99%
+
++ Retract duration List: 0(dissable), 100, 200, 300, 400, 500, 1000, 1500, 2000ms
  
 
 
