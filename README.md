@@ -1,7 +1,7 @@
 # Solder-Paste-Dispenser
 
 ## __Work-in-progress__
-![Picture from KiCad Rendering](Images/Stm32f407zet6-F407zgt6.jpg)
+
 
 Motorized automatic solder paste dispenser. 
 Controled with 32bit processor STM32F103C8T6, 
