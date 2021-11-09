@@ -44,7 +44,7 @@ Motorized automatic solder paste dispenser. Easily printable on a 3D printer at 
 + Speed list : 10, 20, 30, 40, 50, 60, 70, 80, 99%
 + Retract duration List: 0(dissable), 100, 200, 300, 400, 500, 1000, 1500, 2000ms
 + Continuous measurement of battery voltage and CPU temperature
-+ The firmware uses a non-blocking I2C DMA routine for the OLED Display (it saves about 20ms in Loop) **and no waiting to DMA complete as is usual in many of the examples given.**
++ The firmware uses a non-blocking I2C DMA routine for the OLED Display (it saves about 20ms in Loop) **and no waiting to DMA complete as is usual in many of the examples given, which then makes the DMA a blocking wait routine**
 + In addition, non-blocking User Timers derived from SysTick interrupts are used, which do not stop the CPU while waiting for the Timer to run out. The number of these Timers is limited only by the CPU speed and the amount of allocated RAM) *more about this in* [*main.c*](Software/CubeMX/Src/main.c)
 
 + **Tasks**
