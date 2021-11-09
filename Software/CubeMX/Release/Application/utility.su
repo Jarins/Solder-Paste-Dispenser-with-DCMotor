@@ -1,0 +1,9 @@
+utility.c:24:7:ut_ExpMovAvg	16	static
+utility.c:29:7:ut_CalculateAlpha	16	static
+utility.c:34:7:ut_CalculateAlpha1	8	static
+utility.c:39:7:ut_CalculateCutOff	16	static
+utility.c:50:6:ut_CalculateOnlineMeanStdev	24	static
+utility.c:65:6:ut_InitializeOnlineMeanStdev	0	static
+utility.c:73:14:ut_DegToRad	8	static
+utility.c:82:14:ut_RadToDeg	8	static
+utility.c:95:10:ut_ConvFloatToEngStr	40	static
