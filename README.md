@@ -37,7 +37,7 @@ Motorized automatic solder paste dispenser. Easily printable on a 3D printer at 
 
 ![Pic4](images/SolderPasteMotor.gif)
 
-+ All params are immeidiately saved to emulated EEprom(FLASH CPU) after select
++ All params are immeidiately saved to emulated EPROM(FLASH CPU) after select
 + Speed list : 10, 20, 30, 40, 50, 60, 70, 80, 99%
 + Retract duration List: 0(dissable), 100, 200, 300, 400, 500, 1000, 1500, 2000ms
 + Continuous measurement of battery voltage and CPU temperature
