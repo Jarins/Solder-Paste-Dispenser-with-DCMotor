@@ -44,6 +44,8 @@ https://grabcad.com/library/3d-printed-solder-paste-dispenser-1
 
 + Retract duration List: 0(dissable), 100, 200, 300, 400, 500, 1000, 1500, 2000ms
 + Video from the first tests of movement mechanics   https://youtu.be/HmdS7s8p9XI 
++ The first version of the printouts on my 3D printer
+![Pic5](images/IMG_20211104_195446.jpg)
  
 
 
