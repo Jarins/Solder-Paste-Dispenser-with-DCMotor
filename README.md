@@ -1,12 +1,12 @@
 # 3D Printed Solder-Paste-Dispenser
-Motorized automatic solder paste dispenser.
-Easily printable on a 3D printer at home
+Motorized automatic solder paste dispenser. Easily printable on a 3D printer at home
++ **Thanks [kevarek](https://hackaday.io/Kevarek) for inspiration from this [project:](https://hackaday.io/project/169748-low-cost-solder-paste-dispenser)**
++ The idea came from this project, including some parts of the source code that were partially or completely reworked and many new ones added. 
+
 ## __Work-in-progress__
 
 ![Pic1](images/IMG_20211109_155602.jpg)
 
-The idea came from this project:
-https://hackaday.io/project/169748-low-cost-solder-paste-dispenser
 
 ### Some differences:
 
@@ -44,7 +44,7 @@ https://hackaday.io/project/169748-low-cost-solder-paste-dispenser
 + The firmware uses a non-blocking I2C DMA routine for the OLED Display (it saves about 20ms in Loop)
 + In addition, non-blocking User Timers derived from SysTick interrupts are used, which do not stop the CPU while waiting for the Timer to run out. The number of these Timers is limited only by the CPU speed and the amount of allocated RAM) *more about this in* [*main.c*](Software/CubeMX/Src/main.c)
 + 
-#### [Video from the first tests of movement mechanics](https://youtu.be/HmdS7s8p9XI) 
+#### [Video from the first tests of movement mechanics](https://youtu.be/HmdS7s8p9XI) (redirect to YouTube) 
 + The first version of the printouts on my 3D printer
 ![Pic5](images/IMG_20211104_195446.jpg)
  
