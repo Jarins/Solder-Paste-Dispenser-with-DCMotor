@@ -20,6 +20,7 @@ Some differences:
 !! warning component links may be invalid over time !!
 
 + OLED display 128x32 pixels
++ The supply voltage is 9V
 
 PCB is designed in KiCAD software
 ![Pict2](images/SPD_DC_MotorHBridge.png)
@@ -42,6 +43,7 @@ https://grabcad.com/library/3d-printed-solder-paste-dispenser-1
 + Speed list : 10, 20, 30, 40, 50, 60, 70, 80, 99%
 
 + Retract duration List: 0(dissable), 100, 200, 300, 400, 500, 1000, 1500, 2000ms
++ Video from the first tests of movement mechanics   https://youtu.be/HmdS7s8p9XI 
  
 
 
