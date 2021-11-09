@@ -12,12 +12,16 @@ Motorized automatic solder paste dispenser. Easily printable on a 3D printer at 
 
 + Controled with 32bit processor STM32F103C8T6 ( original is STM32F030)
 + used output H-bridge for motor control [TB67H451FNG](https://www.aliexpress.com/item/1005001738294266.html?spm=a2g0s.9042311.0.0.27424c4dVMVyey). **No need cooling with during operation**.
-+ [DC micromotor 6V / 60 rpm](https://www.aliexpress.com/item/33022320164.html?spm=a2g0s.9042311.0.0.266b4c4dmW3uVV) with gearbox without thread rod 
-![Pic0](images/DCMotor6V.png)
-+ [Coupler](https://www.aliexpress.com/item/1005002015620915.html?spm=a2g0s.9042311.0.0.266b4c4dmW3uVV) 3/4mm to thread rod M4.
 + 
-![Pic01](images/Coupler.png)
+![Pic00](images/DCMotor6V.png)
++ [DC micromotor 6V / 60 rpm](https://www.aliexpress.com/item/33022320164.html?spm=a2g0s.9042311.0.0.266b4c4dmW3uVV) with gearbox without thread rod 
++ 
+![Pic001](images/Coupler.png)
+[Coupler](https://www.aliexpress.com/item/1005002015620915.html?spm=a2g0s.9042311.0.0.266b4c4dmW3uVV) 3/4mm to thread rod M4.
++ 
+![Pic002](images/Syringe.png)
 + larger [syringe 10 ccm](https://www.aliexpress.com/item/10000092421369.html?spm=a2g0s.9042311.0.0.27424c4dw27aah)
++ 
 + **redesigned mechanism of operation and piston mounting and mainly redesigned Syringe mount, which can be removed and put on without disassembling the dispenser**
 
 
