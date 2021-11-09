@@ -31,7 +31,9 @@ It would be a little more difficult to migrate to the Arduino IDE,
  
 but even that is partially possible - it has not been tested
 
-![Pic3](images/SolderPasteMotor.gif)
+![Pic3](images/SolderPasteMotor.PNG)
+
+![Pic4](images/SolderPasteMotor.gif)
  
 
 
