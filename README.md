@@ -20,10 +20,10 @@ Some differences:
 
 OLED display 128x32 pixels
 
-PCB id designed in KiCAD software
+PCB is designed in KiCAD software
 ![Pict2](images/SPD_DC_MotorHBridge.png)
 
-Firmware is optimized for STM32CubeIDE and CubeMX software from ST Microelectronics.
+Source code of Firmware is optimized for STM32CubeIDE and CubeMX software from ST Microelectronics.
 
 Source code are easy aplicable to another IDE.
 
