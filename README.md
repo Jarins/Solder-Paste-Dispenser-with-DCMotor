@@ -19,7 +19,7 @@ Motorized automatic solder paste dispenser. Easily printable on a 3D printer at 
 
 !! warning component links may be invalid over time !!
 
-+ OLED display 128x32 pixels
++ [I2C OLED display 128x32](https://www.aliexpress.com/item/32879702750.html?spm=a2g0s.9042311.0.0.27424c4d1LUqwi) pixels for setting dispensing parameters and monitoring operating data
 + The supply voltage is 9V
 
 
