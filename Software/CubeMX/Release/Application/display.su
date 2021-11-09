@@ -1,6 +1,0 @@
-display.c:82:9:floatToString.constprop	48	static
-display.c:33:6:disp_DrawFrame	48	static
-display.c:51:6:disp_DrawSavedPopup	16	static
-display.c:66:6:disp_DrawInitScreen	16	static
-display.c:82:9:floatToString	64	static
-display.c:178:6:disp_DrawScreen	32	static

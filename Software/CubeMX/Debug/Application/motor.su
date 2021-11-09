@@ -1,2 +1,0 @@
-motor.c:20:6:mo_Init	0	static
-motor.c:25:6:mo_SetSpeed	16	static

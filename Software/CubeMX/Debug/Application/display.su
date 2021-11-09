@@ -1,5 +1,0 @@
-display.c:33:6:disp_DrawFrame	32	static
-display.c:51:6:disp_DrawSavedPopup	24	static
-display.c:66:6:disp_DrawInitScreen	16	static
-display.c:82:9:floatToString	56	static
-display.c:178:6:disp_DrawScreen	24	static
