@@ -1,5 +1,7 @@
-# Solder-Paste-Dispenser
-Motorized automatic solder paste dispenser. 
+# 3D Printed Solder-Paste-Dispenser
+Motorized automatic solder paste dispenser.
+
+Easily printable on a 3D printer at home
 ## __Work-in-progress__
 
 ![Pic1](images/IMG_20211109_155602.jpg)
