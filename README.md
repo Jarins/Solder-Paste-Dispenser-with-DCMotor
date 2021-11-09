@@ -43,7 +43,7 @@ https://grabcad.com/library/3d-printed-solder-paste-dispenser-1
 + Speed list : 10, 20, 30, 40, 50, 60, 70, 80, 99%
 
 + Retract duration List: 0(dissable), 100, 200, 300, 400, 500, 1000, 1500, 2000ms
-+ on-Continuous measurement of battery voltage and CPU temperature
++ Continuous measurement of battery voltage and CPU temperature
 + 
 + Video from the first tests of movement mechanics   https://youtu.be/HmdS7s8p9XI 
 + The first version of the printouts on my 3D printer
