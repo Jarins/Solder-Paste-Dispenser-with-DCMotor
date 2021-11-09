@@ -19,6 +19,9 @@ Motorized automatic solder paste dispenser. Easily printable on a 3D printer at 
 
 !! warning component links may be invalid over time !!
 
+----------------------------------------------------------------------
+
+
 + [I2C OLED display 128x32](https://www.aliexpress.com/item/32879702750.html?spm=a2g0s.9042311.0.0.27424c4d1LUqwi) pixels for setting dispensing parameters and monitoring operating data
 + The supply voltage is 9V
 + The MicroUSB port is only used for 5V power supply when programming and debugging firmware to save battery. In this mode it is necessary to disconnect the 9V battery. The USB DM and DP pins are connected to the CPU, but the firmware does not respond to them. 
