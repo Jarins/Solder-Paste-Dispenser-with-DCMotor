@@ -44,7 +44,7 @@ PCB is designed in KiCAD software
 + Retract duration List: 0(dissable), 100, 200, 300, 400, 500, 1000, 1500, 2000ms
 + Continuous measurement of battery voltage and CPU temperature
 + The firmware uses a non-blocking I2C DMA routine for the OLED Display (it saves about 20ms in Loop)
-+ In addition, non-blocking User Timers derived from SysTick interrupts are used, which do not stop the CPU while waiting for the Timer to run out. The number of these Timers is limited only by the CPU speed and the amount of allocated RAM) *more about this in [main.c*](Software/CubeMX/Src/main.c)
++ In addition, non-blocking User Timers derived from SysTick interrupts are used, which do not stop the CPU while waiting for the Timer to run out. The number of these Timers is limited only by the CPU speed and the amount of allocated RAM) *more about this in* [*main.c*](Software/CubeMX/Src/main.c)
 + 
 + [Video from the first tests of movement mechanics](https://youtu.be/HmdS7s8p9XI) 
 + The first version of the printouts on my 3D printer
