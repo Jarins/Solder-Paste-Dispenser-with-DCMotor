@@ -51,7 +51,7 @@ Motorized automatic solder paste dispenser. Easily printable on a 3D printer at 
 + 
 #### [Video from the first tests of movement mechanics](https://youtu.be/HmdS7s8p9XI) (redirect to YouTube) 
 + The first version of the printouts on my 3D printer
-![Pic6](images/IMG_20211104_162506.jpg
+![Pic6](images/IMG_20211104_162506.jpg)
 ![Pic5](images/IMG_20211104_195446.jpg)
  
 
