@@ -48,7 +48,7 @@ Motorized automatic solder paste dispenser. Easily printable on a 3D printer at 
 
 + CAD files are designed in SolidWorks, preview [here](https://grabcad.com/library/3d-printed-solder-paste-dispenser-1):
 
-![Pic3](images/SolderPasteMotor.PNG) 
+![Pic3](images/SolderPasteMotor1.PNG) 
 
 ![Pic4](images/SolderPasteMotor.gif)
 
