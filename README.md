@@ -37,7 +37,7 @@ Motorized automatic solder paste dispenser. Easily printable on a 3D printer at 
 + The MicroUSB port is only used for 5V power supply when programming and debugging firmware to save battery. In this mode it is necessary to disconnect the 9V battery. The USB DM and DP pins are connected to the CPU, but the firmware does not respond to them. 
 + **Resistor R2** (in schematic) for measuring motor current is in the current version mounted with the value 0R, because the possibility of measuring this current is not used at the moment. When this value (0R) is used, the H-bridge turns off motor current monitoring.
 
-#### PCB is designed in KiCAD software
+#### PCB is designed by KiCAD software
 ![Pict2](images/SPD_DC_MotorHBridge.png)
 
 + Source code of Firmware is optimized for STM32CubeIDE and CubeMX software from ST Microelectronics.
