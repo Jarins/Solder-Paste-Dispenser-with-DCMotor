@@ -60,10 +60,16 @@ Motorized automatic solder paste dispenser. Easily printable on a 3D printer at 
 + In addition, non-blocking User Timers derived from SysTick interrupts are used, which do not stop the CPU while waiting for the Timer to run out. The number of these Timers is limited only by the CPU speed and the amount of allocated RAM) *more about this in* [*main.c*](Software/CubeMX/Src/main.c)
 
 + **Tasks**
-- [ ] The continuation of the work consists in the completion of the control button mounted on the Syringe tube and the tuning of the SW for optimal paste dispensing. This is a game with engine on and off times and duty cycle of PWM wave 
+- [x] The continuation of the work consists in the completion of the control button mounted on the Syringe tube and the tuning of the SW for optimal paste dispensing. This is a game with engine on and off times and duty cycle of PWM wave 
+- [ ] Create a video with instructions for assembly and demonstration at work. Soon.
 - [ ] electronics attachment and power supply solution for the future possibility of 12V power supply from a 3D printer.
 - [ ] Next step is using this solder paste dispenser with a 3D printer. It may be necessary to use a stepping motor for dispensing instead. It has a better and more accurate dispensing control option. I have already finished the PCB for this variant with the DRV8825 controller and the NEMA14 stepper motor. 
-+ 
+
+UPDATE 11/22/2021:
+- Syringe control button completed
+- New version firmware 2.0. No blocked Dealy() in Loop() cycle
+![Pic5](images/SwitchRing.PNG)
+
 #### [Video from the first tests of movement mechanics](https://youtu.be/HmdS7s8p9XI) (redirect to YouTube) 
 + The first version of the printouts on my 3D printer
 ![Pic6](images/IMG_20211104_162506.jpg)
