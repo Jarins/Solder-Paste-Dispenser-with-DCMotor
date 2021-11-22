@@ -39,13 +39,14 @@ extern "C" {
 /* USER CODE BEGIN ET */
 typedef struct
 {
-	uint16_t Time;				// Doba Timeru v ms 0 = stoji
-	uint16_t Tick;				// Pocitani Timeru
+	uint16_t Value;			// Time for Reload Timer in ms 0 = STOP
+	uint16_t Tick;				// Counting Timer
 	struct{
-		uint8_t OverCount	:6;	// Count Over Timer
+		uint8_t OverCount	:5;	// Count OverFlow
 		uint8_t Reload		:1;	// Auto Reload
-		uint8_t Over 		:1;	// Preteceni
-	}Flag;
+		uint8_t Over 		:1;	// OverFlow
+		uint8_t Run 		:1;	// RunTimer
+	}Control;
 }TIMER;
 /* USER CODE END ET */
 
@@ -68,6 +69,7 @@ void TimerAction(void);			/* pracuje s Timerem */
 void ReadFromEprom(void);
 void SaveToEprom(void);
 void RestoreFromEprom(void);
+
 #define TRACE_SWO
 
 #ifdef TRACE_SWO
@@ -85,10 +87,13 @@ uint16_t _write(uint16_t file, char *ptr, uint16_t len);
 #define IM_GPIO_Port GPIOA
 #define BPUSH_Pin GPIO_PIN_2
 #define BPUSH_GPIO_Port GPIOA
+#define BPUSH_EXTI_IRQn EXTI2_IRQn
 #define BPULL_Pin GPIO_PIN_3
 #define BPULL_GPIO_Port GPIOA
+#define BPULL_EXTI_IRQn EXTI3_IRQn
 #define BCFG_Pin GPIO_PIN_4
 #define BCFG_GPIO_Port GPIOA
+#define BCFG_EXTI_IRQn EXTI4_IRQn
 #define SYSCLK_Pin GPIO_PIN_5
 #define SYSCLK_GPIO_Port GPIOA
 #define PB_Pin GPIO_PIN_6

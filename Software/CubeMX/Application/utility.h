@@ -19,7 +19,7 @@
 #define UT_SAFEASSIGN(ptr,val)		if( (ptr) ){ ( *(ptr) = (val) ); };
 
 #define DUTYPROC(val, max)		    val = max/100U * val;
-
+#define SWAP(x, y) (x ^= y ^= x ^= y);
 
 typedef struct{
 	float Mean;
@@ -40,6 +40,8 @@ extern float ut_DegToRad(float deg);
 extern float ut_RadToDeg(float rad);
 
 extern uint16_t ut_ConvFloatToEngStr(float val, char *dest, char *temp, uint8_t maxLen, uint8_t decCnt);
+
+extern uint8_t floatToString(char * outstr, float value, uint8_t places, uint8_t minwidth);
 
 
 #endif /* UTILITY_H_ */

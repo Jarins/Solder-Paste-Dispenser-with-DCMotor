@@ -10,7 +10,6 @@
  */
 #include <stdio.h>
 #include "measurement.h"
-#include "error.h"
 #include "adc.h"
 #include "dma.h"
 #include "tim.h"
@@ -69,9 +68,7 @@ void meas_Init(void){
 	Im = 0;
 	Temp = 0;
 	vSense = 0;
-	//HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_1);  //PA_Pin Start pwm motor speed% duty cycle
-	//HAL_TIM_Base_Start(&htim1);
-	// Kalibrace ADC při zapnutí pro lepší přesnost
+	// ADC calibration at power-up for better accuracy
 	 while(HAL_ADCEx_Calibration_Start(&hadc1) != HAL_OK);           // calibrate AD convertor
 	// Start ADC Conversion
 	// Pass (The ADC Instance, Result Buffer Address, Buffer Length)

@@ -52,12 +52,4 @@ void mo_SetSpeed(int16_t speed){
 		HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_2);  //PB_Pin Start pwm motor speed% duty cycle
 		HAL_TIM_Base_Start(&htim3);
 	}
-	else{
-
-
-
-	}
-
-
-
 }

@@ -274,13 +274,13 @@ uint16_t EE_Erases(uint16_t *Erases)
 //Returns the last stored variable data, if found,
 uint16_t EE_ReadAddr (uint16_t Address)
 {
-	uint16_t data;
+	int16_t data;
 	EE_Read(Address, &data);
 	return data;
 }
 
 //Returns the last stored variable data, if found, which correspond to the passed virtual address
-uint16_t EE_Read(uint16_t Address, uint16_t *Data)
+uint16_t EE_Read(uint16_t Address, int16_t *Data)
 {
 	uint32_t pageBase, pageEnd;
 
@@ -312,7 +312,7 @@ uint16_t EE_Read(uint16_t Address, uint16_t *Data)
 }
 
 //Writes/updates variable data in EEPROM.
-uint16_t EE_Write(uint16_t Address, uint16_t Data)
+uint16_t EE_Write(uint16_t Address, int16_t Data)
 {
 	if (Status == EEPROM_NOT_INIT)
 		if (EE_Init() != EEPROM_OK)
