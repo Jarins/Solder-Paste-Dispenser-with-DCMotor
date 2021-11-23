@@ -53,13 +53,13 @@ Motorized automatic solder paste dispenser. Easily printable on a 3D printer at 
 ![Pic4](images/SolderPasteMotor.gif)
 
 **Auto Extrusion cycle:**
-+ short switch ON PUSH button -> Return from retract(retract duration time) -> Pulse for extrusion(pulse time) -> Retract(retract duration time)
++ PUSH button short switch ON -> Return from retract(retract duration time) -> Pulse for extrusion(pulse time) -> Retract(retract duration time)
 
 **Manual Extrusion** 
-+ long switch ON PUSH button(more as Retract duration time + Pulse time) -> extrusion until the PUSH button is switch OFF
++ PUSH button long switch ON(more as Retract duration time + Pulse time) -> extrusion until the PUSH button is switch OFF
 
 **Manual Retract**
-+ switch ON PULL button -> retraction until the PULL button is switch OFF 
++ PULL button switch ON -> retraction until the PULL button is switch OFF 
 +
 + All params are immeidiately saved to emulated EPROM(FLASH CPU) after select
 + Speed: 5, 10, 15 ...... 100% step by 5% 
