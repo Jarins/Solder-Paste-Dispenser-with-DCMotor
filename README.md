@@ -61,12 +61,12 @@ Motorized automatic solder paste dispenser. Easily printable on a 3D printer at 
 **Manual Retract**
 + PULL button switch ON -> retraction until the PULL button is switch OFF. This mode is using for remove and fill Syringe.
 +
-+ All params are immeidiately saved to emulated EPROM(FLASH CPU) after select
++ After selection, all parameters are immediately saved in the emulated EPROM (FLASH CPU).
 + Speed: 5, 10, 15 ...... 100% step by 5% 
 + Retract duration: 0(dissable), 100, 200 ...... 2500ms step by 100 milliseconds
-+ Pulse after piston returned from retract: 0(dissable), 100, 200 ..... 1500ms  step by 100 milliseconds 
++ Pulse after piston returned from retraction: 0(dissable), 100, 200 ..... 1500ms  step by 100 milliseconds 
 + Continuous measurement of battery voltage and CPU temperature
-+ The firmware uses a non-blocking I2C DMA routine for the OLED Display (it saved about 20ms in Loop) **and Loop() no waiting to DMA complete as is usual in many of the examples given, which then makes the DMA a blocking wait routine**
++ The firmware uses a non-blocking I2C DMA routine for the OLED display (this saves about 20 ms in the loop) **and Loop() no waiting to DMA complete as is usual in many of the examples given, which then makes the DMA a blocking wait routine**
 + In addition, non-blocking User Timers derived from SysTick interrupts are used, which do not stop the CPU while waiting for the Timer to run out. The number of these Timers is limited only by the CPU speed and the amount of allocated RAM) *more about this in* [*main.c*](Software/CubeMX/Src/main.c)
 
 + **Tasks**
