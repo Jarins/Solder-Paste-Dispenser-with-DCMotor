@@ -52,11 +52,21 @@ Motorized automatic solder paste dispenser. Easily printable on a 3D printer at 
 
 ![Pic4](images/SolderPasteMotor.gif)
 
+**Auto Extrusion cycle:**
++ short switch ON PUSH button -> Return from retract(retract duration time) -> Pulse for extrusion(pulse time) -> Retract(retract duration time)
+
+**Manual Extrusion** 
++ long switch ON PUSH button(more as Retract duration time + Pulse time) -> extrusion until the PUSH button is switch OFF
+
+**Manual Retract**
++ switch ON PULL button -> retraction until the PULL button is switch OFF 
++
 + All params are immeidiately saved to emulated EPROM(FLASH CPU) after select
-+ Speed list : 10, 20, 30, 40, 50, 60, 70, 80, 99%
-+ Retract duration List: 0(dissable), 100, 200, 300, 400, 500, 1000, 1500, 2000ms
++ Speed: 5, 10, 15 ...... 100% step by 5% 
++ Retract duration: 0(dissable), 100, 200 ...... 2500ms step by 100 milliseconds
++ Pulse after piston returned from retract: 0(dissable), 100, 200 ..... 1500ms  step by 100 milliseconds 
 + Continuous measurement of battery voltage and CPU temperature
-+ The firmware uses a non-blocking I2C DMA routine for the OLED Display (it saves about 20ms in Loop) **and Loop() no waiting to DMA complete as is usual in many of the examples given, which then makes the DMA a blocking wait routine**
++ The firmware uses a non-blocking I2C DMA routine for the OLED Display (it saved about 20ms in Loop) **and Loop() no waiting to DMA complete as is usual in many of the examples given, which then makes the DMA a blocking wait routine**
 + In addition, non-blocking User Timers derived from SysTick interrupts are used, which do not stop the CPU while waiting for the Timer to run out. The number of these Timers is limited only by the CPU speed and the amount of allocated RAM) *more about this in* [*main.c*](Software/CubeMX/Src/main.c)
 
 + **Tasks**
