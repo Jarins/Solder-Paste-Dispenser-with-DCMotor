@@ -51,16 +51,7 @@
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
 extern void Setup(void);
-extern void Loop(void)
-{
-	HAL_GPIO_TogglePin(GPIOA, TEST_Pin);
-	//;GetDateLoop();	//GEt date from RTC and backup to Vbat registers
-	Buttons(); // manage buttons state after interrupt
-	Meassuring(); // calculate all thermo
-	Display(); // if needed redraw display
-	Motor(); // complete motor control
-	Config(); // if need config menu
-}
+extern void Loop(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -99,12 +90,14 @@ int main(void)
   /* USER CODE BEGIN 2 */
   Setup();
   /* USER CODE END 2 */
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
 	{Loop();}//end while
-  /* USER CODE END WHILE */
-  /* USER CODE BEGIN 3 */
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
   /* USER CODE END 3 */
 }
 

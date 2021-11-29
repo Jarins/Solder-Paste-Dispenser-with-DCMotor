@@ -155,7 +155,7 @@ uint16_t ut_ConvFloatToEngStr(float val, char *dest, char *temp, uint8_t maxLen,
 }
 
 //sprintf () is too slow, this function is many times (hundred times) faster
-uint8_t floatToString(char * outstr, float value, uint8_t places, uint8_t minwidth)
+uint8_t floatToString(char * outstr, float value, uint8_t places, uint8_t minwidth, uint8_t noleadzero)
 {
     // this is used to write a float value to string, outstr.  outstr is also the return value.
 	uint8_t digit;
@@ -171,50 +171,31 @@ uint8_t floatToString(char * outstr, float value, uint8_t places, uint8_t minwid
 
     // calculate rounding term d:   0.5/pow(10,places)
     float d = 0.5;
-    if (value < 0)
-        d *= -1.0;
+    if (value < 0) d *= -1.0;
     // divide by ten for each decimal place
-    for (i = 0; i < places; i++)
-        d/= 10.0;
+    for (i = 0; i < places; i++) d/= 10.0;
     // this small addition, combined with truncation will round our values properly
     tempfloat +=  d;
-
     // first get value tens to be the large power of ten less than value
-    if (value < 0)
-        tempfloat *= -1.0;
+    if (value < 0) tempfloat *= -1.0;
     while ((tens * 10.0) <= tempfloat) {
         tens *= 10.0;
         tenscount += 1;
     }
 
-    if (tenscount > 0)
-        charcount += tenscount;
-    else
-        charcount += 1;
+    if (tenscount > 0) charcount += tenscount;
+    else charcount += 1;
 
-    if (value < 0)
-        charcount += 1;
+    if (value < 0) charcount += 1;
     charcount += 1 + places;
-
     minwidth += 1; // both count the null final character
     if (minwidth > charcount){
         extra = minwidth - charcount;
         charcount = minwidth;
     }
-
-//    if (extra > 0 and rightjustify) {
-//        for (int i = 0; i< extra; i++) {
-//            outstr[c++] = ' ';
-//        }
-//    }
-
     // write out the negative if needed
-    if (value < 0)
-        outstr[c++] = '-';
-
-    if (tenscount == 0)
-        outstr[c++] = '0';
-
+    if (value < 0) outstr[c++] = '-';
+    if (tenscount == 0 && noleadzero==0) outstr[c++] = '0';
     for (i=0; i< tenscount; i++) {
         digit = (int) (tempfloat/tens);
         itoa(digit, &outstr[c++], 10);
@@ -223,11 +204,8 @@ uint8_t floatToString(char * outstr, float value, uint8_t places, uint8_t minwid
     }
 
     // if no places after decimal, stop now and return
-
     // otherwise, write the point and continue on
-    if (places > 0)
-    outstr[c++] = '.';
-
+    if (places > 0) outstr[c++] = '.';
 
     // now write out each decimal place by shifting digits one by one into the ones place and writing the truncated value
     for (i = 0; i < places; i++) {
@@ -242,8 +220,6 @@ uint8_t floatToString(char * outstr, float value, uint8_t places, uint8_t minwid
             outstr[c++] = ' ';
         }
     }
-
-
     outstr[c++] = '\0';
     return charcount;
 }

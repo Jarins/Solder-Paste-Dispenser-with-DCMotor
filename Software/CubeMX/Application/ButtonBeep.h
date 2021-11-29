@@ -44,7 +44,7 @@ typedef enum{
 	bbb_ToneTd_VeryHigh = 4
 }bbb_ToneTd;
 
-extern BtnState* ButList[CountButtons];
+extern volatile BtnState* ButList[CountButtons];
 
 extern void bbb_Beep(uint8_t tone, uint8_t time);
 extern void bbb_Melody2(uint8_t tone1, uint8_t tone2, uint16_t time);

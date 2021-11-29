@@ -16,20 +16,33 @@
 //INIT SCREEN INFO --- 18 char per line max
 #define DEVSTRING  "DCMotor dispenser"
 #define NAMESTRING " By Jarin (c)2021"
-#define REVSTR     "       v2.0"
+#define REVSTR     "  v2.21.11.3010"
 
 #define TMPSIZE	21	//18 is the length of line
 char Tmp[TMPSIZE];
 char Line[TMPSIZE];
 char floatBuf[10]; //temp buffer for float conversion
+char PulseText[6];
 char DurationText[6];
 char SpeedText[6];
 
+char* disp_PulseDesc(int16_t pulse)
+{
+	if(pulse>0)
+	{
+		floatToString(floatBuf, (float)((pulse*100)/1000.0), 1, 2, 1);
+		strcpy(PulseText,floatBuf);
+		strcat(PulseText,"s");
+	}
+	else strcpy(PulseText,"Dis ");
+
+	return PulseText;
+}
 char* disp_RetractDurationDesc(int16_t Duration)
 {
 	if(Duration>0)
 	{
-		floatToString(floatBuf, (float)((Duration*100)/1000.0), 1, 3 );
+		floatToString(floatBuf, (float)((Duration*100)/1000.0), 1, 3, 0);
 		strcpy(DurationText,floatBuf);
 		strcat(DurationText,"s");
 	}
@@ -37,14 +50,12 @@ char* disp_RetractDurationDesc(int16_t Duration)
 
 	return DurationText;
 }
-
 char* disp_SpeedDesc(int16_t Speed)
 {
 	itoa(Speed*5,SpeedText,10);
 	strcat(SpeedText,"%");
 	return SpeedText;
 }
-
 
 /*
  * Draws frame around specified area (optionally filled with black color)
@@ -63,7 +74,6 @@ void disp_DrawFrame(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2, uint8_t isFi
 	}
 }
 
-
 /*
  * Draws "saved" pop-up window in the center of the screen
  */
@@ -76,7 +86,6 @@ void disp_DrawSavedPopup(void){
 	SSD1306_Puts(Line, &Font_7x10, SSD1306_COLOR_WHITE);
 	SSD1306_UpdateScreen();
 }
-
 
 /*
  * Draws loading screen with battery voltage and core temperature
@@ -101,33 +110,37 @@ void disp_DrawInitScreen(void){
 
  * Draws normal screen, cfg mode specifies which configuration is highlighted, pushspeed, pullduration is string representation of selected parameters
  */
-void disp_DrawScreen(disp_CfgModeTd cfgMode, char* pushSpeed, char* pullDur, float vBat, float iMeas, float tCore){
+void disp_DrawScreen(disp_CfgModeTd cfgMode, char* pushSpeed, char* pullDur, char* pushPulse, float vBat, float iMeas, float tCore){
 
 	SSD1306_Fill(SSD1306_COLOR_BLACK);
 	//disp_DrawFrame(0, 0, 127, Start_Y+31, 0);
 
 	//FIRST LINE
-	strcpy(Line,"  Speed:   ");
+	strcpy(Line," Speed ");
 	strcat(Line,pushSpeed);
 	SSD1306_GotoXY(1, Start_Y+0);
 	SSD1306_Puts(Line, &Font_7x10, SSD1306_COLOR_WHITE);
 
 	//SECOND LINE
-	strcpy(Line,"  Retract: ");
+	strcpy(Line," Retr ");
 	strcat(Line,pullDur);
+	strcat(Line," Puls");
+	strcat(Line,pushPulse);
 	SSD1306_GotoXY(1, Start_Y+10);
 	SSD1306_Puts(Line, &Font_7x10, SSD1306_COLOR_WHITE);
 
 	//THIRD LINE - button functions
 	if(cfgMode>0){
-		strcpy(Line,"   OK   Less  More");
+		strcpy(Line," Pulse ");
+		strcat(Line,pushPulse);
+		//strcpy(Line,"   OK   Less  More");
 	}
 	else{
-		strcpy(Line,"Bat: ");
-		floatToString(floatBuf, vBat, 1, 3 );
+		strcpy(Line,"Bat ");
+		floatToString(floatBuf, vBat, 1, 3, 0 );
 		strcat(Line,floatBuf);
-		strcat(Line,"V t:");
-		floatToString(floatBuf, tCore, 1, 3 );
+		strcat(Line,"V CPU");
+		floatToString(floatBuf, tCore, 1, 3, 0 );
 		strcat(Line,floatBuf);
 		strcat(Line,"^C"); // file font.c is upgrade to Degrees symbol on the 94(0x5E '^') char position
 	}
@@ -142,6 +155,10 @@ void disp_DrawScreen(disp_CfgModeTd cfgMode, char* pushSpeed, char* pullDur, flo
 	}
 	else if(cfgMode == disp_CfgModeTd_Ret){
 		SSD1306_GotoXY(0, Start_Y+10);
+		SSD1306_Putc('o', &Font_7x10, SSD1306_COLOR_WHITE);
+	}
+	else if(cfgMode == disp_CfgModeTd_Pulse){
+		SSD1306_GotoXY(0, Start_Y+21);
 		SSD1306_Putc('o', &Font_7x10, SSD1306_COLOR_WHITE);
 	}
 

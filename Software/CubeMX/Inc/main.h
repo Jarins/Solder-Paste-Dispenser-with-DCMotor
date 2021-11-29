@@ -70,7 +70,7 @@ void ReadFromEprom(void);
 void SaveToEprom(void);
 void RestoreFromEprom(void);
 
-#define TRACE_SWO
+//#define TRACE_SWO
 
 #ifdef TRACE_SWO
 uint16_t _write(uint16_t file, char *ptr, uint16_t len);

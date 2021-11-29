@@ -18,7 +18,7 @@
 static BtnState BtnPUSH = {false,But_None,BPUSH_GPIO_Port, BPUSH_Pin};
 static BtnState BtnPULL = {false,But_None,BPULL_GPIO_Port, BPULL_Pin};
 static BtnState BtnCFG = {false,But_None,BCFG_GPIO_Port, BCFG_Pin};
-BtnState* ButList[] = {&BtnPUSH, &BtnPULL, &BtnCFG};
+volatile BtnState* ButList[] = {&BtnPUSH, &BtnPULL, &BtnCFG};
 
 static uint8_t BuzzerActive = 0;
 

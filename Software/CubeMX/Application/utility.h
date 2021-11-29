@@ -41,7 +41,7 @@ extern float ut_RadToDeg(float rad);
 
 extern uint16_t ut_ConvFloatToEngStr(float val, char *dest, char *temp, uint8_t maxLen, uint8_t decCnt);
 
-extern uint8_t floatToString(char * outstr, float value, uint8_t places, uint8_t minwidth);
+extern uint8_t floatToString(char * outstr, float value, uint8_t places, uint8_t minwidth, uint8_t noleadzero);
 
 
 #endif /* UTILITY_H_ */
