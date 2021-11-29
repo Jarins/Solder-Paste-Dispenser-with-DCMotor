@@ -3,7 +3,7 @@ Motorized automatic solder paste dispenser. Easily printable on a 3D printer at 
 + **Thanks [kevarek](https://hackaday.io/Kevarek) for inspiration from this [project:](https://hackaday.io/project/169748-low-cost-solder-paste-dispenser)**
 + The idea came from this project, including some parts of the source code that were partially or completely reworked and many new ones added. 
 
-## __Work-in-progress__
+## __Work-in-progress__ Latest version 2.21.11.3010
 
 ![Pic1](images/IMG_20211109_155602.jpg)
 
