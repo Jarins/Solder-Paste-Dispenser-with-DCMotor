@@ -80,7 +80,7 @@ UPDATE 11/22/2021:
 - New version firmware 2.0. No blocked Dealy() in Loop() cycle
 ![Pic5](images/SwitchRing.PNG)
 
-#### [Video from the first tests of movement mechanics](https://youtu.be/HmdS7s8p9XI) (redirect to YouTube) 
+#### [Video Assembly and first testing](https://youtu.be/biS96wBTfaU) (redirect to YouTube) 
 + The first version of the printouts on my 3D printer
 ![Pic6](images/IMG_20211104_162506.jpg)
 ![Pic5](images/IMG_20211104_195446.jpg)
