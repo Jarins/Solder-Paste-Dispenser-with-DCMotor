@@ -67,7 +67,7 @@ Motorized automatic solder paste dispenser. Easily printable on a 3D printer at 
 + Pulse after piston returned from retraction: 0(dissable), 100, 200 ..... 1500ms  step by 100 milliseconds 
 + Continuous measurement of battery voltage and CPU temperature
 + The firmware uses a non-blocking I2C DMA routine for the OLED display (this saves about 20 ms in the loop) **and Loop() no waiting to DMA complete as is usual in many of the examples given, which then makes the DMA a blocking wait routine**
-+ In addition, non-blocking User Timers derived from SysTick interrupts are used, which do not stop the CPU while waiting for the Timer to run out. The number of these Timers is limited only by the CPU speed and the amount of allocated RAM) *more about this in* [*main.c*](Software/CubeMX/Src/main.c)
++ In addition, non-blocking User Timers derived from SysTick interrupts are used, which do not stop the CPU while waiting for the Timer to run out. The number of these Timers is limited only by the CPU speed and the amount of allocated RAM) *more about this in* [*loop.c*](Software/CubeMX/Application/loop.c)
 
 + **Tasks**
 + [x] ***The continuation of the work consists in the completion of the control button mounted on the Syringe tube and the tuning of the SW for optimal paste dispensing. This is a game with engine on and off times and duty cycle of PWM wave***
